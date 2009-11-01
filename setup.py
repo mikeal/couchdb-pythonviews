@@ -37,8 +37,8 @@
 
 from setuptools import setup, find_packages
 
-desc = """Python view server implementation for CouchDB."""
-summ = """Python view server implementation for CouchDB."""
+desc = """Python view server for CouchDB."""
+summ = """Python view server for CouchDB."""
 
 PACKAGE_NAME = "couchdb-pythonviews"
 PACKAGE_VERSION = "0.1"
