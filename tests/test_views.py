@@ -1,8 +1,11 @@
 import os
+import copy
 from datetime import datetime
 from couchquery import Database, createdb, deletedb
 
 this_directory = os.path.abspath(os.path.dirname(__file__))
+
+import json
 
 # to_seconds_float from 
 # http://stackoverflow.com/questions/1083402/missing-datetime-timedelta-toseconds-float-in-python
@@ -31,7 +34,7 @@ class ComparisonTimer(object):
         starttime = datetime.now()
         result = func()
         endtime = datetime.now()
-        self.timers.setdefault(name, {})[subname] = (endtime - starttime)
+        self.timers.setdefault(name, {})[subname] = to_seconds_float(endtime - starttime)
         return result
         
 timer = ComparisonTimer()
@@ -46,29 +49,47 @@ def setupdb():
     db.sync_design_doc('javascriptView', os.path.join(this_directory, 'design'), language='javascript')
     return db
 
+def test_doc(doc, name, count):
+    print 'Testing generation of '+str(count)+' '+name+' documents.'
+    db = setupdb()
+    db.create([copy.copy(doc) for x in range(count)])
+    py = timer(name+'_gen_'+str(count), 'python', 
+                    lambda : db.views.pythonView.byType(limit=1)[0])
+    js = timer(name+'_gen_'+str(count), 'js', 
+                    lambda : db.views.javascriptView.byType(limit=1)[0])
+    assert py == js
+    print 'Testing count of '+str(count)+' '+name+' documents.'
+    pyCount = timer(name+'_count_'+str(count), 'python', lambda : db.views.pythonView.count()[0])
+    jsCount = timer(name+'_count_'+str(count), 'js', lambda : db.views.javascriptView.count()[0])
+    assert pyCount == jsCount == count
+
 def test_small_docs():
     for count in [10, 100, 1000, 10000, 100000]:
-        print 'Testing generation of '+str(count)+' small documents.'
-        db = setupdb()
-        db.create([{'i':x, 'type':'counting'} for x in range(count)])
-        py = timer('smalldoc_gen_'+str(count), 'python', 
-                        lambda : db.views.pythonView.byType(limit=1)[0])
-        js = timer('smalldoc_gen_'+str(count), 'js', 
-                        lambda : db.views.javascriptView.byType(limit=1)[0])
-        assert py == js
-        pyCount = timer('smalldoc_count_'+str(count), 'python', lambda : db.views.pythonView.count()[0])
-        jsCount = timer('smalldoc_count_'+str(count), 'js', lambda : db.views.javascriptView.count()[0])
-        assert pyCount == jsCount == count
-    deletedb(db)
+        test_doc({'type':'counting'}, 'small', count)
+        
+def test_medium_docs():
+    f = open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'medium_size_doc.json'),'r')
+    doc = json.load(f)
+    for count in [10, 100, 1000, 10000, 100000]:
+        test_doc(doc, 'medium', count)
+
+def test_large_docs():
+    f = open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'large_size_doc.json'))
+    doc = json.load(f)
+    for count in [10, 100, 1000, 10000]:
+        test_doc(doc, 'medium', count)
     
 def print_perf():
     for key in sorted(timer.timers.keys()):
         js = timer.timers[key]['js']; py = timer.timers[key]['python']
+        
         if js > py:
-            print key, ": Python by :", to_seconds_float( js - py)
+            print key, ": Python by :",  js - py
         else:
-            print key, ": Javascript by : ", to_seconds_float( py - js)
+            print key, ": Javascript by : ", py - js
 
 if __name__ == '__main__':
-    test_small_docs()
+    # test_small_docs()
+    test_medium_docs()
+    # test_large_docs()
     print_perf()

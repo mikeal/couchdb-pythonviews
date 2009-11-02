@@ -1,0 +1,20 @@
+{
+   "product": "Firefox",
+   "title": {
+       "en-us": "Verify geolocation token is cleared when exiting private browsing"
+   },
+   "tags": [
+   ],
+   "creation_dt": "2009-08-10T09:19:18",
+   "description_rendered": {
+       "en-us": "<h2>Steps</h2>\u000a<ol>\u000a<li>Start Firefox with a  new profile</li>\u000a<li>Enter into private browsing mode by going to Tools | Start Private Browsing</li>\u000a<li>Visit <a href=\"http://people.mozilla.org/~dougt/geo.html\">http://people.mozilla.org/~dougt/geo.html</a> and select the \"Share Location\" button to do a geolocation request</li>\u000a<li>Exit private browsing mode by going to Tools | Stop Private Browsing</li>\u000a<li>Type about:config in a new tab</li>\u000a<li>Filter \"geo.wifi.access_token\"</li>\u000a</ol>\u000a<h2>Expected Result</h2>\u000a<p>Ensure that nothing is in preferences after Step 6.</p>"
+   },
+   "litmus_pks": [
+       7718,
+       9321
+   ],
+   "type": "tcm-testcase",
+   "description_raw": {
+       "en-us": "Steps\u000a-----\u000a\u000a1. Start Firefox with a  new profile\u000d\u000a2. Enter into private browsing mode by going to Tools | Start Private Browsing\u000d\u000a3. Visit <http://people.mozilla.org/~dougt/geo.html> and select the \"Share Location\" button to do a geolocation request\u000d\u000a4. Exit private browsing mode by going to Tools | Stop Private Browsing\u000d\u000a5. Type about:config in a new tab\u000d\u000a6. Filter \"geo.wifi.access_token\"\u000d\u000a\u000a\u000aExpected Result\u000a---------------\u000a\u000aEnsure that nothing is in preferences after Step 6."
+   }
+}

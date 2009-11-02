@@ -1,0 +1,4258 @@
+{
+   "product": "Fennec",
+   "os": "Maemo",
+   "passed_test_names": [
+       "tests/layout/reftests/bugs/413286-4a.html",
+       "tests/layout/reftests/bugs/421632-1.html",
+       "tests/layout/reftests/bugs/364989-1.html",
+       "tests/layout/reftests/table-background/border-collapse-opacity-table-row-group.html",
+       "tests/layout/reftests/generated-content/dynamic-restyle-01.html",
+       "tests/layout/reftests/svg/mask-containing-masked-content-01.svg",
+       "tests/layout/reftests/table-anonymous-boxes/315146-1.xhtml",
+       "tests/layout/reftests/bugs/9458-height-1.html",
+       "tests/layout/reftests/text/wordwrap-06.html",
+       "tests/layout/reftests/text-transform/lowercase-1.html",
+       "tests/layout/reftests/bugs/503364-1a.html",
+       "tests/layout/reftests/native-theme/text-input-nonnative-when-styled.html",
+       "tests/layout/reftests/bugs/385823-2b.html",
+       "tests/layout/reftests/table-background/border-separate-opacity-table-row.html",
+       "tests/content/test/reftest/bug427779.xml",
+       "tests/layout/reftests/first-letter/429968-1a.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s33n3p04.png",
+       "tests/layout/reftests/bugs/134706-4.html",
+       "tests/layout/reftests/bugs/315620-2b.xhtml",
+       "tests/layout/reftests/bugs/351641-1a.html",
+       "tests/layout/reftests/bugs/427370-1.html",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-1g.html",
+       "tests/layout/reftests/bugs/283686-2.html",
+       "tests/layout/reftests/bugs/408656-1c.html",
+       "tests/layout/reftests/pagination/border-breaking-003-cols.xhtml",
+       "tests/layout/reftests/bugs/409659-1c.html",
+       "tests/layout/reftests/table-width/percent-zero.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s34n3p04.png",
+       "tests/layout/reftests/pixel-rounding/background-color-height-top-6.html",
+       "tests/layout/reftests/bidi/425338-1b.html",
+       "tests/layout/reftests/counters/t1202-counters-17-d-test.html",
+       "tests/layout/reftests/mathml/stretchy-underbar-1.xhtml",
+       "tests/layout/reftests/text-shadow/basic.xul",
+       "tests/layout/reftests/inline-borderpadding/rtl-ib.html",
+       "tests/layout/reftests/bugs/408782-2a.html",
+       "tests/layout/reftests/bugs/315620-1a.html",
+       "tests/layout/reftests/pixel-rounding/border-left-5.html",
+       "tests/layout/reftests/table-dom/appendCol2.html",
+       "tests/layout/reftests/svg/text-style-01c.svg",
+       "tests/layout/reftests/bugs/438987-2b.html",
+       "tests/layout/reftests/bugs/486052-2g.html",
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_row1.html",
+       "tests/layout/reftests/counters/t1202-counter-08-b-test.html",
+       "tests/layout/reftests/bugs/457398-2.html",
+       "tests/modules/libpr0n/test/reftest/color-management/invalid-chrm.png",
+       "tests/layout/reftests/table-anonymous-boxes/156888-1.html",
+       "tests/layout/reftests/border-radius/border-circle.html",
+       "tests/layout/reftests/line-breaking/url-2.html",
+       "tests/layout/reftests/ogg-video/poster-15.html",
+       "tests/layout/reftests/bugs/370692-1.xhtml",
+       "tests/layout/reftests/counters/t1202-counter-09-b-test.html",
+       "tests/layout/reftests/svg/gradient-live-01d.svg",
+       "tests/layout/reftests/bugs/228856-2.html",
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-height-5.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--px-pct--viewBox.svg",
+       "tests/layout/reftests/counters/t1204-reset-02-c-o-test.html",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-4.html",
+       "tests/layout/reftests/forms/radio-checked-notref.html",
+       "tests/layout/reftests/bugs/370525-rowspan-1b.html",
+       "tests/layout/reftests/bugs/369975-1.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/ct0n0g04.png",
+       "tests/layout/reftests/bugs/323656-4.html",
+       "tests/layout/reftests/margin-collapsing/block-sibling-1b.html",
+       "tests/layout/reftests/table-anonymous-boxes/white-space-6.html",
+       "tests/layout/reftests/bugs/180085-2.html",
+       "tests/layout/reftests/bugs/428810-1a-ltr-insets.html",
+       "tests/layout/reftests/bugs/467460-1.html",
+       "tests/layout/reftests/bugs/18217-width-1b.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-gamma/g10n3p04.png",
+       "tests/layout/reftests/bugs/139550-1b.html",
+       "tests/layout/reftests/bugs/375827-1.html",
+       "tests/layout/reftests/bugs/352980-1a.html",
+       "tests/layout/reftests/table-dom/deleteCol2.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s08n3p02.png",
+       "tests/layout/reftests/ogg-video/aspect-ratio-3b.xhtml",
+       "tests/layout/reftests/ogg-video/poster-11.html",
+       "tests/layout/reftests/bugs/485275-1.html",
+       "tests/layout/reftests/bugs/406484-1.html",
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_col1.html",
+       "tests/layout/reftests/bugs/379316-2.html",
+       "tests/layout/reftests/text/justification-2a.html",
+       "tests/layout/reftests/object/image-with-type.html",
+       "tests/layout/reftests/bugs/234686-6.html",
+       "tests/layout/reftests/first-letter/23605-5.html",
+       "tests/layout/reftests/bugs/423130-1.html",
+       "tests/layout/reftests/floats/zero-height-float.html",
+       "tests/layout/reftests/text-transform/small-caps-1.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s09n3p02.png",
+       "tests/layout/reftests/bugs/392047.html",
+       "tests/layout/reftests/forms/input-text-centering-1.xul",
+       "tests/layout/reftests/percent-overflow-sizing/hScrollSimpleMinHeightQuirks-3D.html",
+       "tests/layout/reftests/transform/translate-1b.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-background/wrapper.html?bgan6a16.png",
+       "tests/layout/reftests/table-width/conflicting-widths-9.html",
+       "tests/layout/reftests/first-letter/23605-6.html",
+       "tests/layout/reftests/svg/sizing/standalone--pct-0--0-pct.svg",
+       "tests/layout/reftests/marquee/425247-2.html",
+       "tests/layout/reftests/bugs/336147-1.html",
+       "tests/layout/reftests/bugs/9458-zorder-1.html",
+       "tests/layout/reftests/svg/text-style-01a.svg",
+       "tests/layout/reftests/bugs/369882.xul",
+       "tests/layout/reftests/box-properties/width-special-values-float-intrinsic.html",
+       "tests/layout/reftests/bugs/395107-5.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-background/wrapper.html?bgwn6a08.png",
+       "tests/layout/reftests/table-background/border-separate-table-column.html",
+       "tests/layout/reftests/first-letter/basic-1.html",
+       "tests/layout/reftests/bugs/414851-1.html",
+       "tests/layout/reftests/native-theme/combobox-nonnative-when-styled.html",
+       "tests/modules/libpr0n/test/reftest/color-management/trc-type.html",
+       "tests/layout/reftests/pagination/abspos-overflow-01.xhtml",
+       "tests/layout/reftests/first-line/stress-9.html",
+       "tests/layout/reftests/margin-collapsing/block-overflow-1.html",
+       "tests/layout/reftests/transform/origin-2a.html",
+       "tests/layout/reftests/bugs/424236-2.html",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-16a.html",
+       "tests/layout/reftests/first-letter/quote-1a.html",
+       "tests/layout/reftests/text/pre-line-1.html",
+       "tests/layout/reftests/bugs/462844-4.html",
+       "tests/layout/reftests/table-background/backgr_border-table-column-group.html",
+       "tests/layout/reftests/bugs/438987-1.html",
+       "tests/layout/reftests/margin-collapsing/fieldset-sibling-2c.html",
+       "tests/layout/reftests/first-letter/429968-2a.html",
+       "tests/layout/reftests/bugs/388026-1.html",
+       "tests/layout/reftests/canvas/text-rtl-start.html",
+       "tests/layout/reftests/bugs/68061-1.xml",
+       "tests/modules/libpr0n/test/reftest/generic/accept-image-catchall.html",
+       "tests/layout/reftests/svg/gradient-live-01c.svg",
+       "tests/layout/reftests/bugs/399209-1.html",
+       "tests/layout/reftests/svg/currentColor-02.svg",
+       "tests/layout/reftests/percent-overflow-sizing/hScrollSimpleHeightQuirks-2.html",
+       "tests/layout/reftests/bugs/234686-7.html",
+       "tests/layout/reftests/margin-collapsing/block-html-body-1.html",
+       "tests/layout/reftests/bugs/458487-1a.html",
+       "tests/layout/reftests/text-transform/capitalize-2.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-pct--0-px.svg",
+       "tests/layout/reftests/bugs/18217-width-2a.html",
+       "tests/layout/reftests/bugs/480880-2c.html",
+       "tests/layout/reftests/native-theme/button-nonnative-when-styled.html",
+       "tests/layout/reftests/bidi/425338-1a.html",
+       "tests/layout/reftests/table-anonymous-boxes/white-space-9.html",
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-top-5.html",
+       "tests/layout/reftests/counters/t1204-implied-00-b-test.html",
+       "tests/layout/reftests/margin-collapsing/block-clear-3e.html",
+       "tests/layout/reftests/bugs/368020-1.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--pct-pct--viewBox.svg",
+       "tests/layout/reftests/generated-content/display-types-01.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-gamma/g03n2c08.png",
+       "tests/layout/reftests/bugs/476063-1.html",
+       "tests/layout/reftests/svg/foreignObject-display-01.svg",
+       "tests/modules/libpr0n/test/reftest/pngsuite-corrupted/wrapper.html?xcrn0g04.png",
+       "tests/layout/reftests/bugs/332975-1.html",
+       "tests/layout/reftests/bugs/338251-pre.html",
+       "tests/layout/reftests/bugs/307102-1.html",
+       "tests/layout/reftests/bugs/243519-5a.html",
+       "tests/layout/reftests/svg/radialGradient-basic-01.svg",
+       "tests/layout/reftests/bugs/428810-3a-rtl-insets.html",
+       "tests/layout/reftests/bugs/25888-3l.html",
+       "tests/layout/reftests/bugs/362594-2a.html",
+       "tests/layout/xul/base/src/grid/reftests/not-full-grid-pack-align.xul",
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-i/basi3p04.png",
+       "tests/layout/reftests/bugs/243519-5d.html",
+       "tests/layout/reftests/svg/sizing/standalone--0-0--px-px.svg",
+       "tests/layout/reftests/bidi/mixedChartype-01-j.html",
+       "tests/layout/reftests/bugs/356775-1.html",
+       "tests/layout/reftests/bugs/428810-2e-rtl-insets.html",
+       "tests/layout/reftests/object/svg-with-type.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cm7n0g04.png",
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cdsn2c08.png",
+       "tests/layout/reftests/bugs/407243-1.html",
+       "tests/layout/reftests/bugs/315920-4.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s35n3p04.png",
+       "tests/layout/reftests/bugs/478614-2.html",
+       "tests/layout/reftests/text-transform/capitalize-3.html",
+       "tests/layout/reftests/svg/sizing/standalone--pct-0--px-px.svg",
+       "tests/layout/reftests/inline-borderpadding/ltr-ib.html",
+       "tests/layout/reftests/svg/sizing/standalone--0-0--px-0.svg",
+       "tests/layout/reftests/first-letter/nested-1a.html",
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-size-7x7.jpg",
+       "tests/layout/reftests/text-indent/text-indent-intrinsic-pref.html",
+       "tests/layout/reftests/svg/foreignObject-change-transform-01.svg",
+       "tests/layout/reftests/margin-collapsing/block-overflow-4.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--0-0.svg",
+       "tests/layout/reftests/bugs/478956-1b.html",
+       "tests/layout/reftests/bugs/404030-1.html",
+       "tests/layout/reftests/svg/selector-01.svg",
+       "tests/layout/reftests/css-import/445415-1a.xhtml",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-2d.html",
+       "tests/layout/reftests/bugs/315920-8b.html",
+       "tests/layout/reftests/bidi/386339.html",
+       "tests/layout/reftests/bidi/492231-1.html",
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-1e.html",
+       "tests/layout/reftests/canvas/text-rtl-right.html",
+       "tests/layout/reftests/bugs/201293-1a.html",
+       "tests/layout/reftests/svg/filters/feImage-1.svg",
+       "tests/layout/reftests/bugs/299136-1.html",
+       "tests/layout/reftests/bugs/333970-1.html",
+       "tests/layout/reftests/transform/descendant-1.html",
+       "tests/layout/reftests/svg/sizing/standalone--0-pct--px-px.svg",
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--px-0.svg",
+       "tests/layout/reftests/first-letter/dynamic-3b.html",
+       "tests/layout/reftests/mathml/underbar-width-1.xhtml",
+       "tests/layout/reftests/svg/sizing/standalone--auto-0--pct-0.svg",
+       "tests/layout/reftests/columns/pref-width-1a.html",
+       "tests/layout/reftests/bugs/412352-2.html",
+       "tests/layout/reftests/transform/percent-1d.html",
+       "tests/layout/reftests/table-dom/insertCellsExpandZeroRowspan.html",
+       "tests/layout/reftests/svg/radialGradient-basic-03.svg",
+       "tests/layout/reftests/backgrounds/viewport-translucent-color-2.html",
+       "tests/layout/reftests/bugs/368020-3.html",
+       "tests/layout/reftests/bugs/206516-1.html",
+       "tests/layout/reftests/first-letter/399941-1.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/ctzn0g04.png",
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-n/basn0g08.png",
+       "tests/layout/reftests/margin-collapsing/block-sibling-1c.html",
+       "tests/layout/reftests/bugs/391412-1a.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-pct--pct-pct.svg",
+       "tests/layout/reftests/table-dom/insertColGroups1.html",
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-size-31x31.jpg",
+       "tests/layout/reftests/pagination/resize-reflow-001.html",
+       "tests/layout/reftests/columns/min-width-1c.html",
+       "tests/layout/reftests/css-mediaqueries/mq_print_minwidth.xhtml",
+       "tests/layout/reftests/table-anonymous-boxes/white-space-21.html",
+       "tests/layout/reftests/printing/test-async-print.html",
+       "tests/layout/reftests/bugs/413286-1a.html",
+       "tests/layout/reftests/bugs/413982.html",
+       "tests/layout/reftests/bugs/422394-1.html",
+       "tests/layout/reftests/text/white-space-2.html",
+       "tests/layout/reftests/bugs/414123.xhtml",
+       "tests/layout/reftests/bugs/428810-2-rtl-ref.html",
+       "tests/layout/reftests/pixel-rounding/background-image-top-height-5.html",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-8a.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cm9n0g04.png",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s32i3p04.png",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s37i3p04.png",
+       "tests/layout/reftests/svg/sizing/standalone--auto-px--pct-pct--viewBox.svg",
+       "tests/modules/libpr0n/test/reftest/pngsuite-background/wrapper.html?bgai4a16.png",
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-top-height-5.html",
+       "tests/layout/reftests/table-anonymous-boxes/372641-1c.xhtml",
+       "tests/layout/reftests/transform/origin-name-2c.html",
+       "tests/layout/reftests/bugs/331809-1.html",
+       "tests/layout/reftests/bugs/404030-1-notref.html",
+       "tests/layout/reftests/table-width/percent-small-min.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-filtering/f02n0g08.png",
+       "tests/layout/reftests/inline-borderpadding/ltr-span-only.html",
+       "tests/layout/reftests/bugs/428810-3-ltr-insets-ref.html",
+       "tests/layout/reftests/bugs/134706-3-left-table.html",
+       "tests/layout/reftests/bugs/416106-1.xhtml",
+       "tests/layout/reftests/xul-document-load/test004.xul",
+       "tests/layout/reftests/svg/getElementById-a-element-01.svg",
+       "tests/layout/reftests/table-width/colspan-percent-distribution-2.html",
+       "tests/layout/reftests/canvas/text-space-replace-test.html",
+       "tests/layout/reftests/box-shadow/boxshadow-rounded-spread.html",
+       "tests/layout/reftests/pixel-rounding/border-image-width-9.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-n/basn0g02.png",
+       "tests/layout/reftests/svg/sizing/standalone--px-0--px-0.svg",
+       "tests/layout/reftests/css-charset/test-charset-utf-16-be-no-bom.html",
+       "tests/layout/reftests/pixel-rounding/image-top-5.html",
+       "tests/layout/reftests/bugs/404149-1.xul",
+       "tests/layout/reftests/transform/translate-1d.html",
+       "tests/layout/reftests/bugs/40596-1c.html",
+       "tests/layout/reftests/pixel-rounding/offscreen-0-ref.html",
+       "tests/layout/reftests/svg/sizing/standalone--pct-auto--0-0.svg",
+       "tests/layout/reftests/percent-overflow-sizing/hScrollSimpleHeightQuirks-3.html",
+       "tests/layout/reftests/bugs/480880-1a.html",
+       "tests/layout/reftests/table-dom/insertCols5.html",
+       "tests/layout/reftests/bugs/483565.xul",
+       "tests/layout/reftests/border-image/transparent-image-1.html",
+       "tests/layout/reftests/pixel-rounding/check-image-blue.html",
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-size-4x4.jpg",
+       "tests/layout/reftests/table-width/conflicting-widths-7.html",
+       "tests/layout/reftests/table-bordercollapse/frame_vsides_rules_cols.html",
+       "tests/layout/reftests/table-background/border-separate-table-column-group.html",
+       "tests/layout/reftests/table-anonymous-boxes/208305-4.html",
+       "tests/layout/reftests/percent-overflow-sizing/simpleAbsHeightD.html",
+       "tests/layout/reftests/bugs/446100-1a.html",
+       "tests/layout/reftests/bugs/261826-1.xul",
+       "tests/layout/reftests/text-shadow/standards-decor-noblur.html",
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-2b.html",
+       "tests/layout/reftests/xul-document-load/test001.xul",
+       "tests/layout/reftests/bugs/370525-sib.html",
+       "tests/layout/reftests/margin-collapsing/block-no-content-3.html",
+       "tests/layout/reftests/bugs/399636-quirks-html.html",
+       "tests/layout/reftests/bugs/428810-3f-rtl-insets.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-auto--0-pct.svg",
+       "tests/layout/reftests/ogg-video/empty-1a.html",
+       "tests/layout/reftests/bugs/482659-1c.html",
+       "tests/layout/reftests/bugs/315920-3b.html",
+       "tests/layout/reftests/table-dom/deleteCellsShrink2.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-n/basn3p04.png",
+       "tests/layout/reftests/bugs/24998-1.html",
+       "tests/layout/reftests/bugs/413840-pushed-line-bullet.html",
+       "tests/layout/reftests/table-anonymous-boxes/cols-test-2.html",
+       "tests/layout/reftests/bugs/389924-1a.html",
+       "tests/layout/reftests/bugs/255820-1.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-auto--0-0.svg",
+       "tests/layout/reftests/bugs/480880-1e.html",
+       "tests/layout/reftests/transform/rotate-1d.html",
+       "tests/layout/reftests/bugs/428521-1a.html",
+       "tests/layout/reftests/first-line/stress-10.html",
+       "tests/layout/reftests/text-shadow/quirks-decor-noblur.html",
+       "tests/layout/reftests/table-anonymous-boxes/203923-2.html",
+       "tests/layout/reftests/pixel-rounding/image-left-width-4.html",
+       "tests/layout/reftests/bidi/bidi-001-v.html",
+       "tests/layout/reftests/native-theme/427122-1.html",
+       "tests/layout/reftests/table-dom/insertTbodyExpand1.html",
+       "tests/layout/reftests/table-dom/appendCellsZeroColspan.html",
+       "tests/layout/reftests/table-width/percent-basis.html",
+       "tests/layout/reftests/box-properties/max-height-1.html",
+       "tests/layout/reftests/margin-collapsing/inline-horizontal-1.html",
+       "tests/layout/reftests/transform/translatex-1c.html",
+       "tests/layout/reftests/transform/translate-1e.html",
+       "tests/layout/reftests/bugs/402629-2.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-0--0-0.svg",
+       "tests/layout/reftests/bugs/428810-1-ltr-insets-ref.html",
+       "tests/layout/reftests/pixel-rounding/image-top-4.html",
+       "tests/layout/reftests/inline-borderpadding/rtl-span-only-ib.html",
+       "tests/layout/reftests/bugs/25888-1l.html",
+       "tests/layout/reftests/pixel-rounding/image-top-height-6.html",
+       "tests/layout/reftests/bugs/402940-1.html",
+       "tests/layout/reftests/bugs/481948-2.html",
+       "tests/layout/reftests/bugs/234686-5.html",
+       "tests/layout/reftests/bugs/428810-2b-rtl-insets.html",
+       "tests/layout/reftests/forms/indeterminate-checked.html",
+       "tests/layout/reftests/bugs/458487-5a.html",
+       "tests/layout/reftests/transform/compound-1a.html",
+       "tests/layout/reftests/svg/sizing/inline--position-relative--01.xhtml",
+       "tests/layout/reftests/printing/blank.html",
+       "tests/layout/reftests/bugs/352980-1i.html",
+       "tests/layout/reftests/table-bordercollapse/frame_rhs_rules_none.html",
+       "tests/layout/reftests/bugs/475986-4.html",
+       "tests/layout/reftests/forms/indeterminate-selector.html",
+       "tests/layout/reftests/bugs/445004-1.html",
+       "tests/layout/reftests/bugs/399258-1.html",
+       "tests/layout/reftests/bugs/368504-4.html",
+       "tests/layout/reftests/bugs/472769-2.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-palettes/pp0n2c16.png",
+       "tests/layout/reftests/table-anonymous-boxes/white-space-8.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-0--pct-pct.svg",
+       "tests/layout/reftests/text/pre-line-3.html",
+       "tests/layout/reftests/svg/linearGradient-basic-02.svg",
+       "tests/layout/reftests/table-background/backgr_border-table-column.html",
+       "tests/layout/reftests/table-width/spacing-invariance-standards-min.html",
+       "tests/layout/reftests/bugs/409659-1b.html",
+       "tests/layout/reftests/bugs/402629-3.html",
+       "tests/layout/reftests/bugs/234686-3.html",
+       "tests/layout/reftests/transform/rotate-2a.html",
+       "tests/layout/reftests/bugs/280708-1b.html",
+       "tests/layout/reftests/bugs/309550-1.html",
+       "tests/layout/reftests/bugs/352980-2a.html",
+       "tests/layout/reftests/first-letter/229764-1.html",
+       "tests/layout/reftests/text-shadow/color-inherit.html",
+       "tests/layout/reftests/forms/checkbox-radio-stretched.html",
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-height-6.html",
+       "tests/layout/reftests/text-indent/text-indent-single-line-100.html",
+       "tests/layout/reftests/css-mediaqueries/mq_print_aspectratio.xhtml",
+       "tests/layout/reftests/border-image/multicolor-image-5.html",
+       "tests/layout/reftests/first-line/out-of-flow-1a.html",
+       "tests/layout/reftests/bidi/with-first-letter-1b.html",
+       "tests/layout/reftests/bugs/371041-1.html",
+       "tests/layout/reftests/bugs/486052-2e.html",
+       "tests/layout/reftests/table-width/default-box-sizing-collapse-standards.html",
+       "tests/layout/reftests/box-shadow/tableboxshadow-tdshadow.html",
+       "tests/layout/reftests/css-mediaqueries/mq_print_width.xhtml",
+       "tests/layout/reftests/counters/t1202-counters-00-b-test.html",
+       "tests/layout/reftests/svg/sizing/standalone--0-auto--pct-0.svg",
+       "tests/layout/reftests/border-image/solid-image-1.html",
+       "tests/layout/reftests/table-background/backgr_border-table-row.html",
+       "tests/layout/reftests/bugs/386920-1.html",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-2h.html",
+       "tests/layout/reftests/text-shadow/basic-negcoord.html",
+       "tests/layout/xul/base/src/grid/reftests/scrollable-rows.xul",
+       "tests/layout/reftests/pixel-rounding/background-image-left-5.html",
+       "tests/layout/reftests/counters/t1204-implied-01-c-test.html",
+       "tests/layout/reftests/bugs/386470-1a.html",
+       "tests/layout/reftests/bugs/398797-1b.html",
+       "tests/layout/reftests/bugs/18217-height-1.html",
+       "tests/layout/reftests/bugs/300691-1a.html",
+       "tests/content/test/reftest/xml-stylesheet/xslt_relative_href.svg",
+       "tests/layout/reftests/text-decoration/text-decoration-zorder-1-standards.html",
+       "tests/layout/reftests/bugs/413286-6.html",
+       "tests/layout/reftests/svg/sizing/dynamic--inline-resize-window-height.xhtml",
+       "tests/layout/reftests/pixel-rounding/border-width-4.html",
+       "tests/layout/reftests/table-dom/deleteCol1.html",
+       "tests/layout/reftests/pixel-rounding/background-color-width-5.html",
+       "tests/layout/reftests/xul-document-load/test017.xul",
+       "tests/layout/reftests/box-shadow/boxshadow-basic.html",
+       "tests/layout/reftests/xul-document-load/test022.xul",
+       "tests/layout/reftests/table-dom/deleteRowsRebuild1a.html",
+       "tests/layout/reftests/table-anonymous-boxes/dynamic-switch-inline-to-cell-2.html",
+       "tests/layout/reftests/margin-collapsing/block-abs-pos-2.html",
+       "tests/layout/reftests/table-dom/insertCellsRebuild2.html",
+       "tests/layout/reftests/bugs/363858-6a.html",
+       "tests/layout/reftests/bugs/449149-1a.html",
+       "tests/layout/reftests/svg/bugs/bug367368.xhtml",
+       "tests/content/test/reftest/xml-stylesheet/xslt_selflink_dtd_id.xml",
+       "tests/layout/reftests/ogg-video/poster-12.html",
+       "tests/layout/reftests/counters/t1202-counters-11-b-test.html",
+       "tests/layout/reftests/pixel-rounding/background-color-top-height-5.html",
+       "tests/layout/reftests/bugs/394534-1.html",
+       "tests/layout/reftests/counters/t1204-increment-01-c-o-test.html",
+       "tests/layout/reftests/bidi/bidi-000.html",
+       "tests/layout/reftests/svg/pattern-live-01c.svg",
+       "tests/layout/reftests/border-image/multicolor-image-4.html",
+       "tests/layout/reftests/bugs/455280-1.xhtml",
+       "tests/layout/reftests/bugs/476598-1b.html",
+       "tests/layout/reftests/bugs/341043-1b.html",
+       "tests/layout/reftests/transform/scaley-1.html",
+       "tests/layout/reftests/bugs/362594-1b.html",
+       "tests/layout/reftests/ib-split/insert-into-split-inline-2a.html",
+       "tests/layout/reftests/table-anonymous-boxes/infer-rows-inside-rowgroups.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-px--pct-0.svg",
+       "tests/layout/reftests/first-line/out-of-flow-1c.html",
+       "tests/layout/reftests/bugs/427730-1.html",
+       "tests/layout/reftests/columns/column-balancing-overflow-003.html",
+       "tests/layout/reftests/margin-collapsing/block-float-2b.html",
+       "tests/layout/reftests/css-import/445415-1b.xhtml",
+       "tests/layout/reftests/counters/t120401-scope-04-d-test.html",
+       "tests/layout/reftests/ogg-video/poster-2.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-px--pct-px--viewBox.svg",
+       "tests/layout/reftests/table-anonymous-boxes/dynamic-removal-12.html",
+       "tests/modules/libpr0n/test/reftest/color-management/invalid-whitepoint.png",
+       "tests/layout/reftests/object/404-data.html",
+       "tests/layout/reftests/pixel-rounding/background-image-left-width-4.html",
+       "tests/layout/reftests/xul-document-load/test012.xul",
+       "tests/layout/reftests/bugs/399384-1.html",
+       "tests/layout/reftests/bugs/363858-4.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--pct-px--viewBox.svg",
+       "tests/layout/reftests/bugs/377603-1.html",
+       "tests/layout/reftests/bugs/386401-1.html",
+       "tests/layout/reftests/table-bordercollapse/bc_borderoffset2.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-i/basi2c16.png",
+       "tests/layout/reftests/bugs/348809-2g.html",
+       "tests/layout/reftests/margin-collapsing/inline-block-sibling-1b.html",
+       "tests/layout/reftests/bugs/428810-3a-ltr.html",
+       "tests/layout/reftests/bugs/302379.html",
+       "tests/layout/reftests/svg/sizing/standalone--0-0--0-px.svg",
+       "tests/layout/reftests/counters/t1204-increment-02-c-o-test.html",
+       "tests/layout/reftests/svg-integration/clipPath-html-05.xhtml",
+       "tests/layout/reftests/css-valuesandunits/unit-rem-div-width-outer.html",
+       "tests/layout/reftests/bidi/mixedChartype-00-j.html",
+       "tests/layout/reftests/counters/t1202-counter-04-b-test.html",
+       "tests/layout/reftests/bugs/214077-1a.html",
+       "tests/layout/reftests/svg/sizing/inline--position-absolute--02.xhtml",
+       "tests/layout/reftests/bugs/495385-5.html",
+       "tests/layout/reftests/bugs/210094-1a.html",
+       "tests/layout/reftests/counters/t120403-display-none-00-c-test.html",
+       "tests/layout/reftests/svg-integration/clipPath-html-02-extref.xhtml",
+       "tests/layout/reftests/css-mediaqueries/mq_print_minheight_updown.xhtml",
+       "tests/layout/reftests/svg-integration/filter-html-01-extref.xhtml",
+       "tests/layout/reftests/bugs/363858-1.html",
+       "tests/layout/reftests/xul-document-load/test015.xul",
+       "tests/layout/reftests/bugs/345267-1d.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--px-pct.svg",
+       "tests/layout/reftests/bugs/18217-zorder-3.html",
+       "tests/layout/reftests/bugs/234686-16.html",
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-3d.html",
+       "tests/layout/reftests/bugs/386310-1b.html",
+       "tests/layout/reftests/svg/text-style-01d.svg",
+       "tests/layout/reftests/forms/checkbox-checked.html",
+       "tests/layout/reftests/bugs/411334-1.xml",
+       "tests/layout/reftests/bugs/461266-1.html",
+       "tests/layout/reftests/bugs/367220-1.html",
+       "tests/layout/reftests/printing/381497-n.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-px--pct-pct.svg",
+       "tests/layout/reftests/bugs/374927-1.html",
+       "tests/layout/reftests/svg/pseudo-classes-01.svg",
+       "tests/modules/libpr0n/test/reftest/pngsuite-palettes/ps2n2c16.png",
+       "tests/layout/reftests/bugs/428810-2e-ltr.html",
+       "tests/layout/reftests/margin-collapsing/block-negative-3a.html",
+       "tests/layout/reftests/table-background/backgr_index.html",
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-1c.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-0--0-px.svg",
+       "tests/layout/reftests/counters/t1202-counters-15-b-test.html",
+       "tests/layout/reftests/border-radius/border-ellips.html",
+       "tests/layout/reftests/bugs/163504-2b.html",
+       "tests/layout/reftests/table-anonymous-boxes/363326-1.html",
+       "tests/layout/reftests/line-breaking/non-breakable-1.html",
+       "tests/layout/reftests/object/type-overridden-by-server.html",
+       "tests/layout/reftests/table-width/spanning-cell-sort-2-large-fixed.html",
+       "tests/layout/reftests/text/zwnj-01.html",
+       "tests/layout/reftests/border-image/center-scaling-4tb.html",
+       "tests/layout/reftests/bugs/490173-1.html",
+       "tests/layout/reftests/bugs/428810-1b-ltr.html",
+       "tests/layout/reftests/printing/272830-1.html",
+       "tests/layout/reftests/table-anonymous-boxes/white-space-24.html",
+       "tests/layout/reftests/backgrounds/layers-layer-count-cascade-1.xhtml",
+       "tests/layout/reftests/css-mediaqueries/mq_print_maxheight.xhtml",
+       "tests/layout/reftests/bugs/418766-1b.html",
+       "tests/layout/reftests/bugs/384762-1.html",
+       "tests/layout/reftests/bugs/212563-1.html",
+       "tests/layout/reftests/pixel-rounding/image-left-width-6.html",
+       "tests/layout/reftests/table-anonymous-boxes/dynamic-removal-2.html",
+       "tests/layout/reftests/bugs/403426-1.html",
+       "tests/layout/reftests/transform/matrix-5a.html",
+       "tests/layout/reftests/bugs/495385-2d.html",
+       "tests/layout/reftests/bugs/407095-1.html",
+       "tests/layout/reftests/svg/switch-01.svg",
+       "tests/layout/reftests/svg/sizing/standalone--0-pct--px-pct.svg",
+       "tests/layout/reftests/bugs/416752-1.html",
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_cell3.html",
+       "tests/layout/reftests/table-anonymous-boxes/white-space-10.html",
+       "tests/layout/reftests/text/swash-1.html",
+       "tests/layout/reftests/bugs/413027-1.html",
+       "tests/layout/reftests/bugs/413840-bullet-first-line.html",
+       "tests/layout/reftests/bugs/458487-1g.html",
+       "tests/layout/reftests/bugs/23604-2.html",
+       "tests/layout/reftests/bugs/403519-2.html",
+       "tests/layout/reftests/bugs/243519-9e.html",
+       "tests/layout/reftests/margin-collapsing/block-clear-4d.html",
+       "tests/layout/reftests/generated-content/dynamic-attr-01.html",
+       "tests/layout/reftests/bugs/379461-2.xhtml",
+       "tests/layout/reftests/bugs/399636-standards-html.html",
+       "tests/layout/reftests/pixel-rounding/collapsed-border-left-4.html",
+       "tests/layout/reftests/bidi/413928-2.html",
+       "tests/layout/reftests/transform/skew-2a.html",
+       "tests/layout/reftests/line-breaking/currency-2.html",
+       "tests/layout/reftests/bugs/315920-23.html",
+       "tests/layout/reftests/bugs/424710-1.html",
+       "tests/layout/reftests/bugs/445142-2b.html",
+       "tests/layout/reftests/svg/currentColor-03.svg",
+       "tests/layout/reftests/margin-collapsing/block-abs-pos-1.html",
+       "tests/layout/reftests/bugs/381130-1.html",
+       "tests/layout/reftests/bugs/482592-1b.xhtml",
+       "tests/layout/reftests/bugs/495385-2i.html",
+       "tests/content/test/reftest/xml-stylesheet/lreas_selflink_relative_href.svg",
+       "tests/layout/reftests/bugs/386147-1.html",
+       "tests/layout/reftests/bugs/348049-1.xhtml",
+       "tests/layout/reftests/bugs/370586-1.xhtml",
+       "tests/layout/reftests/bugs/399636-standards-css.html",
+       "tests/layout/reftests/xul-document-load/test013.xul",
+       "tests/layout/reftests/table-anonymous-boxes/infer-cells-3.html",
+       "tests/layout/reftests/svg/sizing/standalone--px-pct--0-pct.svg",
+       "tests/layout/reftests/bugs/494667-1.html",
+       "tests/layout/reftests/bugs/211931-1.html",
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_cell1.html",
+       "tests/layout/reftests/bugs/367332-1b.html",
+       "tests/layout/reftests/bugs/360757-1b.html",
+       "tests/content/test/reftest/xml-stylesheet/css_relative_href_also_external.xml",
+       "tests/layout/reftests/bugs/419531-1.html",
+       "tests/layout/reftests/counters/t1202-counter-00-b-test.html",
+       "tests/layout/reftests/table-bordercollapse/frame_box_rules_groups.html",
+       "tests/layout/reftests/bugs/428423-1b.html",
+       "tests/layout/reftests/bugs/379349-1b.xhtml",
+       "tests/layout/reftests/first-letter/23605-2.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s36i3p04.png",
+       "tests/layout/reftests/bugs/192902-1.html",
+       "tests/layout/reftests/margin-collapsing/block-clear-4c.html",
+       "tests/layout/reftests/forms/text-control-baseline-1.html",
+       "tests/layout/reftests/first-line/stress-3.html",
+       "tests/layout/reftests/columns/columnrule-padding.html",
+       "tests/layout/reftests/bugs/372768-1.html",
+       "tests/layout/reftests/svg/sizing/object--auto-auto--px-0.html",
+       "tests/layout/reftests/bugs/9458-zorder-4.html",
+       "tests/layout/reftests/bugs/433700.html",
+       "tests/layout/reftests/table-dom/appendCells1.html",
+       "tests/layout/reftests/svg/dynamic-switch-01.svg",
+       "tests/layout/reftests/bugs/400171-1b.html",
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-cmyk-1.jpg",
+       "tests/layout/reftests/margin-collapsing/block-clear-3f.html",
+       "tests/layout/reftests/table-background/backgr_simple-table-column-group.html",
+       "tests/layout/reftests/bugs/306630-1.html",
+       "tests/layout/reftests/bugs/243519-8.svg",
+       "tests/layout/reftests/bugs/335628-2.xul",
+       "tests/layout/reftests/bugs/405186-1.xhtml",
+       "tests/layout/reftests/bugs/355548-4.xml",
+       "tests/layout/reftests/bugs/395107-1.html",
+       "tests/layout/reftests/pixel-rounding/border-top-4.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cs5n2c08.png",
+       "tests/layout/reftests/backgrounds/continuous-inline-1b.html",
+       "tests/layout/reftests/bugs/373381-3.html",
+       "tests/layout/reftests/table-width/spanning-cell-sort-1-large-fixed.html"
+   ],
+   "timestamp": "2009-07-15 10:04:12.467250",
+   "tests": {
+       "tests/layout/reftests/bugs/413286-4a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/421632-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/364989-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-background/border-collapse-opacity-table-row-group.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/generated-content/dynamic-restyle-01.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/mask-containing-masked-content-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/315146-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/9458-height-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/wordwrap-06.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-transform/lowercase-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/503364-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/native-theme/text-input-nonnative-when-styled.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/filter-marked-line-04.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/385823-2b.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/table-background/border-separate-opacity-table-row.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/content/test/reftest/bug427779.xml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/429968-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s33n3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/134706-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/315620-2b.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/351641-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/427370-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-1g.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/283686-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/408656-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pagination/border-breaking-003-cols.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/409659-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/percent-zero.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s34n3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/background-color-height-top-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/425338-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counters-17-d-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/mathml/stretchy-underbar-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-shadow/basic.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/inline-borderpadding/rtl-ib.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/408782-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/315620-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feDisplacementMap-2.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/pixel-rounding/border-left-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/appendCol2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/text-style-01c.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/438987-2b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/486052-2g.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_row1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counter-08-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/457398-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/color-management/invalid-chrm.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/156888-1.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/border-radius/border-circle.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/svg-integration/mask-html-01-extref-01.xhtml": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/line-breaking/url-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/poster-15.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/370692-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counter-09-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/gradient-live-01d.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/228856-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-height-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--px-pct--viewBox.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1204-reset-02-c-o-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/radio-checked-notref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/370525-rowspan-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feFlood-1.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/369975-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/ct0n0g04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/323656-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-sibling-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/white-space-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/180085-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-1a-ltr-insets.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/467460-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/18217-width-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-gamma/g10n3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/139550-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/375827-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/352980-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/deleteCol2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s08n3p02.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/aspect-ratio-3b.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/poster-11.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/485275-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/406484-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_col1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/379316-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/justification-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/object/image-with-type.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/234686-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/23605-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/423130-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/floats/zero-height-float.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/text-transform/small-caps-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s09n3p02.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/392047.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/input-text-centering-1.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/percent-overflow-sizing/hScrollSimpleMinHeightQuirks-3D.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/translate-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-pct--pct-px.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-background/wrapper.html?bgan6a16.png": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/table-width/conflicting-widths-9.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/23605-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-0--0-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/marquee/425247-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/336147-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/9458-zorder-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/text-style-01a.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/369882.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/box-properties/width-special-values-float-intrinsic.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/395107-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-background/wrapper.html?bgwn6a08.png": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/table-background/border-separate-table-column.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/basic-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/414851-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/native-theme/combobox-nonnative-when-styled.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/color-management/trc-type.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pagination/abspos-overflow-01.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-line/stress-9.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-overflow-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/origin-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/424236-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-16a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/quote-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/pre-line-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/462844-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-background/backgr_border-table-column-group.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/438987-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/fieldset-sibling-2c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/first-letter/429968-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/388026-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/canvas/text-rtl-start.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/68061-1.xml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/generic/accept-image-catchall.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/gradient-live-01c.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/399209-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/currentColor-02.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/percent-overflow-sizing/hScrollSimpleHeightQuirks-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/234686-7.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-html-body-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 6
+       },
+       "tests/layout/reftests/bugs/458487-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-transform/capitalize-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-pct--0-px.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/18217-width-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/480880-2c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/native-theme/button-nonnative-when-styled.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/425338-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/white-space-9.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-top-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1204-implied-00-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-clear-3e.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/368020-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--pct-pct--viewBox.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/generated-content/display-types-01.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-gamma/g03n2c08.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/filter-marked-line-09.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/476063-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/filter-marked-line-05.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg/foreignObject-display-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-corrupted/wrapper.html?xcrn0g04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/332975-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/338251-pre.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/307102-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/243519-5a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/radialGradient-basic-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-3a-rtl-insets.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/25888-3l.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/362594-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/xul/base/src/grid/reftests/not-full-grid-pack-align.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-i/basi3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/243519-5d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--0-0--px-px.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/mixedChartype-01-j.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/356775-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-2e-rtl-insets.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/object/svg-with-type.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cm7n0g04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cdsn2c08.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-px--pct-px.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/407243-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/315920-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/467084-1.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s35n3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/478614-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-transform/capitalize-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-0--px-px.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-auto--pct-pct.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/inline-borderpadding/ltr-ib.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--0-0--px-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/nested-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-size-7x7.jpg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-indent/text-indent-intrinsic-pref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/foreignObject-change-transform-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-overflow-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--0-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/478956-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/404030-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/selector-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-import/445415-1a.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-px--0-px.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-2d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/315920-8b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/386339.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/492231-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-1e.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/canvas/text-rtl-right.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/201293-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feImage-1.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/299136-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/333970-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/descendant-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--0-pct--px-px.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--px-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/dynamic-3b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/mathml/underbar-width-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-0--pct-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/columns/pref-width-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/412352-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/percent-1d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/insertCellsExpandZeroRowspan.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/radialGradient-basic-03.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/backgrounds/viewport-translucent-color-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/368020-3.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/206516-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/399941-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/ctzn0g04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-n/basn0g08.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-sibling-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/391412-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-pct--pct-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/insertColGroups1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-size-31x31.jpg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pagination/resize-reflow-001.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feComponentTransfer-2.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/columns/min-width-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/dynamic--inline-resize-cb-width.xhtml": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/css-mediaqueries/mq_print_minwidth.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/white-space-21.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/printing/test-async-print.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/413286-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/413982.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/422394-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/white-space-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/414123.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feMorphology-radius-zero-02.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/428810-2-rtl-ref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/pixel-rounding/background-image-top-height-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-8a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cm9n0g04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s32i3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s37i3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-px--pct-pct--viewBox.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-background/wrapper.html?bgai4a16.png": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-top-height-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/372641-1c.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/origin-name-2c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/331809-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/404030-1-notref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/percent-small-min.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-filtering/f02n0g08.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/inline-borderpadding/ltr-span-only.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-3-ltr-insets-ref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/134706-3-left-table.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/416106-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test004.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/getElementById-a-element-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/colspan-percent-distribution-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/canvas/text-space-replace-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/box-shadow/boxshadow-rounded-spread.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/border-image-width-9.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-n/basn0g02.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-0--px-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-charset/test-charset-utf-16-be-no-bom.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/image-top-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/404149-1.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/translate-1d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/40596-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/offscreen-0-ref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-auto--0-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/percent-overflow-sizing/hScrollSimpleHeightQuirks-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/480880-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/insertCols5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/483565.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/border-image/transparent-image-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/check-image-blue.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-size-4x4.jpg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/conflicting-widths-7.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/frame_vsides_rules_cols.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-background/border-separate-table-column-group.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/208305-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/percent-overflow-sizing/simpleAbsHeightD.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/446100-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/261826-1.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-shadow/standards-decor-noblur.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/soft-hyphens-1c.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-2b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test001.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/370525-sib.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-no-content-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/399636-quirks-html.html": {
+           "fail": 0,
+           "note": "(!=),  (!=)\u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/428810-3f-rtl-insets.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-auto--0-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/empty-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/482659-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/315920-3b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/deleteCellsShrink2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-n/basn3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/24998-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/413840-pushed-line-bullet.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/cols-test-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/389924-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/bugs/255820-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-auto--0-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/480880-1e.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/rotate-1d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/440112.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/428521-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-line/stress-10.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-shadow/quirks-decor-noblur.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/203923-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/image-left-width-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/bidi-001-v.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/native-theme/427122-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/insertTbodyExpand1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/appendCellsZeroColspan.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/percent-basis.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/box-properties/max-height-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/inline-horizontal-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/transform/translatex-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/translate-1e.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/402629-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-0--0-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-1-ltr-insets-ref.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/image-top-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/inline-borderpadding/rtl-span-only-ib.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/25888-1l.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/pixel-rounding/image-top-height-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/402940-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/481948-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/234686-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-2b-rtl-insets.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/indeterminate-checked.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/458487-5a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/compound-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/svg/sizing/inline--position-relative--01.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/466395-1.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/printing/blank.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/352980-1i.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/frame_rhs_rules_none.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/475986-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/indeterminate-selector.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/445004-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/399258-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/368504-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-transparency/wrapper.html?tbwn1g16.png": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/472769-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-palettes/pp0n2c16.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/white-space-8.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-0--pct-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/pre-line-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/linearGradient-basic-02.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-background/backgr_border-table-column.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/spacing-invariance-standards-min.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/409659-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/402629-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/234686-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/rotate-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/280708-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/309550-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/352980-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/229764-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-shadow/color-inherit.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/checkbox-radio-stretched.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/rounded-background-color-height-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-indent/text-indent-single-line-100.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/css-mediaqueries/mq_print_aspectratio.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/border-image/multicolor-image-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-line/out-of-flow-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/with-first-letter-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feTile-1.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/371041-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/486052-2e.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/default-box-sizing-collapse-standards.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/box-shadow/tableboxshadow-tdshadow.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-mediaqueries/mq_print_width.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/canvas/text-horzline-with-top.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/counters/t1202-counters-00-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--0-auto--pct-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/border-image/solid-image-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-background/backgr_border-table-row.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/386920-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-2h.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/301726-2.html": {
+           "fail": 4,
+           "note": "(!=),  (!=)\u000a,  (!=)\u000a,  (!=)\u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/text-shadow/basic-negcoord.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/xul/base/src/grid/reftests/scrollable-rows.xul": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/pixel-rounding/background-image-left-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1204-implied-01-c-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/386470-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/398797-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/18217-height-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/300691-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/content/test/reftest/xml-stylesheet/xslt_relative_href.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text-decoration/text-decoration-zorder-1-standards.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/413286-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/dynamic--inline-resize-window-height.xhtml": {
+           "fail": 0,
+           "note": "(SKIP),  (SKIP)\u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/pixel-rounding/border-width-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/deleteCol1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/background-color-width-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test017.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/aspect-ratio-1b.xhtml": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/box-shadow/boxshadow-basic.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test022.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/deleteRowsRebuild1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/dynamic-switch-inline-to-cell-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-abs-pos-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/insertCellsRebuild2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/363858-6a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/449149-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/bugs/bug367368.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/content/test/reftest/xml-stylesheet/xslt_selflink_dtd_id.xml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/poster-12.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counters-11-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/background-color-top-height-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/394534-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1204-increment-01-c-o-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/bidi-000.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/pattern-live-01c.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/border-image/multicolor-image-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/455280-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/476598-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/bugs/341043-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/scaley-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/362594-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ib-split/insert-into-split-inline-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/infer-rows-inside-rowgroups.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-px--pct-0.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-line/out-of-flow-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/427730-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/columns/column-balancing-overflow-003.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-float-2b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-import/445415-1b.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t120401-scope-04-d-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/ogg-video/poster-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-px--pct-px--viewBox.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/dynamic-removal-12.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/color-management/invalid-whitepoint.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/object/404-data.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/background-image-left-width-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test012.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/399384-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/363858-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--pct-px--viewBox.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/377603-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/386401-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-auto--pct-pct--viewBox.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/table-bordercollapse/bc_borderoffset2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-basic-i/basi2c16.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/348809-2g.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/inline-block-sibling-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/18217-valign-1.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/428810-3a-ltr.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/302379.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--0-0--0-px.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1204-increment-02-c-o-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg-integration/clipPath-html-05.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-valuesandunits/unit-rem-div-width-outer.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bidi/mixedChartype-00-j.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counter-04-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/214077-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/inline--position-absolute--02.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/495385-5.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/210094-1a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t120403-display-none-00-c-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg-integration/clipPath-html-02-extref.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-mediaqueries/mq_print_minheight_updown.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg-integration/filter-html-01-extref.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/363858-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test015.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/345267-1d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/native-theme/checkbox-native.html": {
+           "fail": 4,
+           "note": "(!=),  (!=)\u000a,  (!=)\u000a,  (!=)\u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-auto--px-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/18217-zorder-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/234686-16.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-3d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/386310-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/feBlend-2.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg-integration/mask-html-zoomed-01.xhtml": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/margin-collapsing/block-overflow-2.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg/text-style-01d.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/checkbox-checked.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 4
+       },
+       "tests/layout/reftests/bugs/411334-1.xml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/461266-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/367220-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/printing/381497-n.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-px--pct-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/374927-1.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg/pseudo-classes-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-px--0-0.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-palettes/ps2n2c16.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-2e-ltr.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/margin-collapsing/block-negative-3a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-background/backgr_index.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-non-sibling-1c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--auto-0--0-px.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counters-15-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/border-radius/border-ellips.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/163504-2b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/363326-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/line-breaking/non-breakable-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/object/type-overridden-by-server.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/spanning-cell-sort-2-large-fixed.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/zwnj-01.html": {
+           "fail": 0,
+           "note": "(!=),  (!=)\u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/border-image/center-scaling-4tb.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/490173-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428810-1b-ltr.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/printing/272830-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/white-space-24.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/backgrounds/layers-layer-count-cascade-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/css-mediaqueries/mq_print_maxheight.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/418766-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/384762-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/212563-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/image-left-width-6.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/dynamic-removal-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/403426-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/matrix-5a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-pct--pct-pct.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/495385-2d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/407095-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/switch-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--0-pct--px-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/416752-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_cell3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/white-space-10.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/text/swash-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/413027-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/413840-bullet-first-line.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/filters/filter-marked-line-02.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/458487-1g.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/23604-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/403519-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/243519-9e.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-clear-4d.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/generated-content/dynamic-attr-01.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/379461-2.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/399636-standards-html.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/collapsed-border-left-4.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/bidi/413928-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/transform/skew-2a.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/line-breaking/currency-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/315920-23.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/424710-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/445142-2b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/currentColor-03.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-abs-pos-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/381130-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/colordepth.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/482592-1b.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/495385-2i.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/content/test/reftest/xml-stylesheet/lreas_selflink_relative_href.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/386147-1.html": {
+           "fail": 0,
+           "note": ", \u000a",
+           "todo": 2,
+           "pass": 0
+       },
+       "tests/layout/reftests/bugs/348049-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/370586-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/399636-standards-css.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/xul-document-load/test013.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-anonymous-boxes/infer-cells-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--px-pct--0-pct.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/494667-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/211931-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/bc_dyn_cell1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/367332-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/360757-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/content/test/reftest/xml-stylesheet/css_relative_href_also_external.xml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/419531-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/counters/t1202-counter-00-b-test.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-bordercollapse/frame_box_rules_groups.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/428423-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/379349-1b.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/first-letter/23605-2.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-oddsizes/s36i3p04.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/192902-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-clear-4c.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/forms/text-control-baseline-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-transparency/wrapper.html?tbyn3p08.png": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/first-line/stress-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/columns/columnrule-padding.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/372768-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/sizing/standalone--pct-pct--px-0.svg": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/svg/sizing/object--auto-auto--px-0.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/9458-zorder-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/433700.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-dom/appendCells1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/svg/dynamic-switch-01.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/400171-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/jpeg/jpg-cmyk-1.jpg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/margin-collapsing/block-clear-3f.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/9458-valign-1.html": {
+           "fail": 4,
+           "note": ", \u000a, \u000a, \u000a",
+           "todo": 0,
+           "pass": 0
+       },
+       "tests/layout/reftests/table-background/backgr_simple-table-column-group.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/306630-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/243519-8.svg": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/335628-2.xul": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/405186-1.xhtml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/355548-4.xml": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/395107-1.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/pixel-rounding/border-top-4.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/modules/libpr0n/test/reftest/pngsuite-ancillary/cs5n2c08.png": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/backgrounds/continuous-inline-1b.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/bugs/373381-3.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       },
+       "tests/layout/reftests/table-width/spanning-cell-sort-1-large-fixed.html": {
+           "fail": 0,
+           "note": "",
+           "todo": 0,
+           "pass": 2
+       }
+   },
+   "failed_test_names": [
+       "tests/layout/reftests/svg/filters/filter-marked-line-04.svg",
+       "tests/layout/reftests/svg/filters/feDisplacementMap-2.svg",
+       "tests/layout/reftests/svg-integration/mask-html-01-extref-01.xhtml",
+       "tests/layout/reftests/svg/filters/feFlood-1.svg",
+       "tests/layout/reftests/svg/sizing/standalone--pct-pct--pct-px.svg",
+       "tests/layout/reftests/svg/filters/filter-marked-line-09.svg",
+       "tests/layout/reftests/svg/filters/filter-marked-line-05.svg",
+       "tests/layout/reftests/svg/sizing/standalone--pct-px--pct-px.svg",
+       "tests/layout/reftests/bugs/467084-1.html",
+       "tests/layout/reftests/svg/sizing/standalone--auto-auto--pct-pct.svg",
+       "tests/layout/reftests/svg/sizing/standalone--pct-px--0-px.svg",
+       "tests/layout/reftests/svg/filters/feComponentTransfer-2.svg",
+       "tests/layout/reftests/svg/sizing/dynamic--inline-resize-cb-width.xhtml",
+       "tests/layout/reftests/svg/filters/feMorphology-radius-zero-02.svg",
+       "tests/layout/reftests/text/soft-hyphens-1c.html",
+       "tests/layout/reftests/bugs/440112.html",
+       "tests/layout/reftests/bugs/466395-1.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-transparency/wrapper.html?tbwn1g16.png",
+       "tests/layout/reftests/svg/filters/feTile-1.svg",
+       "tests/layout/reftests/canvas/text-horzline-with-top.html",
+       "tests/layout/reftests/bugs/301726-2.html",
+       "tests/layout/reftests/ogg-video/aspect-ratio-1b.xhtml",
+       "tests/layout/reftests/svg/sizing/standalone--pct-auto--pct-pct--viewBox.svg",
+       "tests/layout/reftests/bugs/18217-valign-1.html",
+       "tests/layout/reftests/native-theme/checkbox-native.html",
+       "tests/layout/reftests/svg/filters/feBlend-2.svg",
+       "tests/layout/reftests/svg-integration/mask-html-zoomed-01.xhtml",
+       "tests/layout/reftests/margin-collapsing/block-overflow-2.html",
+       "tests/layout/reftests/svg/sizing/standalone--pct-px--0-0.svg",
+       "tests/layout/reftests/svg/sizing/standalone--pct-pct--pct-pct.svg",
+       "tests/layout/reftests/svg/filters/filter-marked-line-02.svg",
+       "tests/modules/libpr0n/test/reftest/colordepth.html",
+       "tests/modules/libpr0n/test/reftest/pngsuite-transparency/wrapper.html?tbyn3p08.png",
+       "tests/layout/reftests/svg/sizing/standalone--pct-pct--px-0.svg",
+       "tests/layout/reftests/bugs/9458-valign-1.html"
+   ],
+   "build": "sampletest",
+   "type": "fennec-test-run",
+   "pass_count": 1130,
+   "testtype": "reftest",
+   "fail_count": 140
+}

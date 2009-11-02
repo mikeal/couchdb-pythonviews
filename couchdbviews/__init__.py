@@ -2,6 +2,7 @@ import sys
 import copy
 import traceback
 import inspect
+import couchdb_wsgi
 
 # Use simplejson if it's installed because it's probably compiled with speedups
 try:
@@ -30,10 +31,24 @@ def rereduce_function(func):
     func._is_rereduce_function = True
     return func
 
-eval_locals = {'map_function':map_function, 'reduce_function':reduce_function, 
-               'rereduce_function':rereduce_function,}
+def validate_function(func):
+    func._is_validate_function = True
+    return func
 
-# log = open('/Users/mikeal/Documents/git/couchdb-pythonviews/test.json', 'w')
+def show_function(func):
+    func._is_show_function = True
+    return func
+    
+def wsgi_show_function(func):
+    func._is_show_function = True
+    func._is_wsgi_show_function = True
+
+eval_locals = {'map_function':map_function, 'reduce_function':reduce_function, 
+               'rereduce_function':rereduce_function, 'validate_function':validate_function,
+               'show_function':show_function, "wsgi_show_function":wsgi_show_function}
+
+log = open('/Users/mikeal/Documents/git/couchdb-pythonviews/test.json', 'a')
+log.write('new run\n')
 
 reduce_args_processor = {
     'rereduce':lambda x: False,
@@ -51,17 +66,22 @@ def get_reduce_args(func):
         return spec.args
 
 class CouchDBViewHandler(object):
-    def __init__(self, ins=sys.stdin, outs=sys.stdout):
-        self.environments = {'map':{},'reduce':{}}
+    def __init__(self, ins=sys.stdin, outs=sys.stdout, eval_locals=eval_locals):
+        self.environments = {'map':{},'reduce':{},'show':{},'validate':{}}
         self.map_functions = {}
         self.reduce_functions = {}
         self.rereduce_functions = {}
+        self.show_functions = {}
+        self.validate_functions = {}
         self.current_functions = []
         self.ins = ins
         self.outs = outs
         
+        self.eval_locals = eval_locals
+        
         self.handler_map = {'add_fun':self.add_fun,  'map_doc':self.map_doc, 'reset':self.reset,
-                            'reduce' :self.reduce_handler, 'rereduce':self.rereduce_handler}
+                            'reduce' :self.reduce_handler, 'rereduce':self.rereduce_handler,
+                            'validate':self.validate_handler, 'show':self.show_handler}
         
     def reset(self, *args):
         # if len(args) is not 0:
@@ -72,7 +92,7 @@ class CouchDBViewHandler(object):
     
     def add_fun(self, func_string):
         if func_string not in self.map_functions:
-            env = copy.copy(eval_locals)
+            env = copy.copy(self.eval_locals)
             exec func_string in env
             self.environments['map'][func_string] = env
             for obj in env.values():
@@ -102,7 +122,7 @@ class CouchDBViewHandler(object):
         self.outs.flush()
         
     def load_reduce(self, func_string):
-        env = copy.copy(eval_locals)
+        env = copy.copy(self.eval_locals)
         exec func_string in env
         self.environments['reduce'][func_string] = env
         for obj in env.values():
@@ -137,6 +157,59 @@ class CouchDBViewHandler(object):
                 results.append(r(values))
         self.output([True, results])
     
+    def show_handler(self, func_string, doc, request):
+        if func_string not in self.show_functions:
+            env = copy.copy(self.eval_locals)
+            exec func_string in env
+            self.environments['show'][func_string] = env
+            for obj in env.values():
+                if getattr(obj, '_is_show_function', None) is True:
+                    self.show_functions[func_string] = obj
+        func = self.show_functions[func_string]
+        if getattr(func, '_is_wsgi_show_function', None):
+            request['couchdb.document'] = doc
+            r = couchdbwsgi.CouchDBWSGIRequest(request)
+            try:
+                response = self.application(r.environ, r.start_response)
+            except Exception, e:
+                r.code = 500
+                response = traceback.format_exc()
+                r.headers = {'content-type':'text/plain'}
+
+            self.output(['resp',{'code':r.code, 'body':''.join(response), 'headers':r.headers}])
+        else:    
+            try:
+                response = func(doc, request)
+            except Exception, e:
+                response = {'code':500, 'body':''.join(traceback.format_exc()), 
+                            'headers':{'content-type':'text/plain'}}
+            if type(response) is str or type(response) is unicode:
+                response = {'body':response}
+            self.output(['resp',response])
+    
+    def validate_handler(self, func_string, new, old, user):
+        if func_string not in self.validate_functions:
+            env = copy.copy(self.eval_locals)
+            exec func_string in env
+            self.environments['validate'][func_string] = env
+            for obj in env.values():
+                if getattr(obj, '_is_validate_function', None) is True:
+                    self.validate_functions[func_string] = obj    
+        func = self.validate_functions[func_string]
+        try:
+            func(new, old, user)
+            valid = True
+        except Exception, e:
+            valid = False
+            response = {"error": "exception:"+str(e.__class__.__name__), "reason": [e.args, traceback.format_exc()]}
+            if len(e.args) is 1:
+                if type(e.args[0]) is dict:
+                    response = e.args[0]
+            self.outs.write(json.dumps(response)+'\n')
+        if valid:
+            self.outs.write('1\n')
+        self.outs.flush()
+    
     def handle(self, array):
         try:
             self.handler_map[array[0]](*array[1:])
@@ -146,16 +219,15 @@ class CouchDBViewHandler(object):
     def lines(self):
         line = self.ins.readline()
         while line:
-            # log.write(line)
-            # log.flush()
+            log.write(line)
+            log.flush()
             yield json.loads(line)
             line = self.ins.readline()
             
     def run(self):
+        self.eval_locals['log'] = self.log
         for obj in self.lines():
             self.handle(obj)
-        
-    
     
 def run():
     CouchDBViewHandler().run()
