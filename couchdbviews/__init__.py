@@ -42,6 +42,15 @@ def show_function(func):
 def wsgi_show_function(func):
     func._is_show_function = True
     func._is_wsgi_show_function = True
+    return func
+
+def filter_function(func):
+    func._is_filter_function = True
+    return func
+
+def update_function(func):
+    func._is_update_function = True
+    return func
 
 class EndList(Exception): pass
 
@@ -75,10 +84,11 @@ class ListView(object):
 eval_locals = {'map_function':map_function, 'reduce_function':reduce_function, 
                'rereduce_function':rereduce_function, 'validate_function':validate_function,
                'show_function':show_function, "wsgi_show_function":wsgi_show_function,
+               'filter_function':filter_function, 'update_function':update_function,
                'ListView':ListView, 'EndList':EndList}
 
-log = open('/Users/mikeal/Documents/git/couchdb-pythonviews/test.json', 'a')
-log.write('new run\n')
+# log = open('/Users/mikeal/Documents/git/couchdb-pythonviews/test.json', 'a')
+# log.write('new run\n')
 
 reduce_args_processor = {
     'rereduce':lambda x: False,
@@ -97,16 +107,19 @@ def get_reduce_args(func):
 
 class CouchDBViewHandler(object):
     def __init__(self, ins=sys.stdin, outs=sys.stdout, eval_locals=eval_locals):
-        self.environments = {'map':{},'reduce':{},'show':{},'validate':{}}
+        self.environments = {}
         self.map_functions = {}
         self.reduce_functions = {}
         self.rereduce_functions = {}
         self.show_functions = {}
         self.validate_functions = {}
+        self.filter_functions = {}
+        self.update_functions = {}
         self.list_views = {}
         self.current_functions = []
         self.ins = ins
         self.outs = outs
+        self.list_view_instance = None
         
         self.eval_locals = eval_locals
         
@@ -114,25 +127,48 @@ class CouchDBViewHandler(object):
                             'reduce' :self.reduce_handler, 'rereduce':self.rereduce_handler,
                             'validate':self.validate_handler, 'show':self.show_handler,
                             'list':self.list_handler, 'list_row':self.list_row_handler, 
-                            'list_end':self.list_end_handler}
+                            'list_end':self.list_end_handler, 'filter':self.filter_handler,
+                            'update':self.update_handler}
         
     def reset(self, *args):
         # if len(args) is not 0:
         #     self.log("Got some arguments, no idea what to do with them: "+str(args))
         self.current_functions = []
+        if self.list_view_instance is not None:
+            self.output({'error':'query_server_error','reason':'reset called during list'})
+            # sys.exit(1) call is for spec compliance, I'm not convinced it's necessary
+            sys.exit(1)
         self.outs.write('true\n')
         self.outs.flush()
     
-    def add_fun(self, func_string):
-        if func_string not in self.map_functions:
+    def load(self, func_string):
+        if func_string not in self.environments:
             env = copy.copy(self.eval_locals)
             exec func_string in env
-            self.environments['map'][func_string] = env
+            self.environments[func_string] = env
             for obj in env.values():
                 if getattr(obj, '_is_map_function', None) is True:
                     self.map_functions[func_string] = obj
                 if getattr(obj, '_is_list_view', None) is True and obj is not ListView:
                     self.list_views[func_string] = obj
+                if getattr(obj, '_is_filter_function', None) is True:
+                    self.filter_functions[func_string] = obj
+                if getattr(obj, '_is_update_function', None) is True:
+                    self.update_functions[func_string] = obj
+                if getattr(obj, '_is_reduce_function', None) is True:
+                    obj._reduce_args = get_reduce_args(obj)
+                    self.reduce_functions[func_string] = obj
+                if getattr(obj, '_is_rereduce_function', None) is True:
+                    self.rereduce_functions[func_string] = obj
+                if getattr(obj, '_is_validate_function', None) is True:
+                    self.validate_functions[func_string] = obj
+                if getattr(obj, '_is_show_function', None) is True:
+                    self.show_functions[func_string] = obj
+            if func_string not in self.rereduce_functions and func_string in self.reduce_functions:
+                self.rereduce_functions[func_string] = self.reduce_functions[func_string]
+    
+    def add_fun(self, func_string, write=True):
+        self.load(func_string)    
         self.current_functions.append(func_string)
         self.outs.write('true\n')
         self.outs.flush()
@@ -147,7 +183,7 @@ class CouchDBViewHandler(object):
     def map_doc(self, doc):
         results = []
         for func_string in self.current_functions:
-            env = self.environments['map'][func_string]
+            env = self.environments[func_string]
             emitter = Emitter()
             env['emit'] = emitter.emit
             self.map_functions[func_string](doc)
@@ -156,24 +192,11 @@ class CouchDBViewHandler(object):
         self.outs.write('['+','.join(results)+']\n')
         self.outs.flush()
         
-    def load_reduce(self, func_string):
-        env = copy.copy(self.eval_locals)
-        exec func_string in env
-        self.environments['reduce'][func_string] = env
-        for obj in env.values():
-            if getattr(obj, '_is_reduce_function', None) is True:
-                self.reduce_functions[func_string] = obj
-            if getattr(obj, '_is_rereduce_function', None) is True:
-                self.rereduce_functions[func_string] = obj
-        if func_string not in self.rereduce_functions:
-            self.rereduce_functions[func_string] = self.reduce_functions[func_string]
-        self.reduce_functions[func_string]._reduce_args = get_reduce_args(self.reduce_functions[func_string])
-    
+
     def reduce_handler(self, func_strings, reduce_args):
         results = []
         for func_string in func_strings:
-            if func_string not in self.reduce_functions:
-                self.load_reduce(func_string)
+            self.load(func_string)
             r = self.reduce_functions[func_string]
             kwargs = dict([(k, reduce_args_processor[k](reduce_args),) for k in r._reduce_args])
             # TODO: Better error handling here and per result JSON serialization
@@ -183,8 +206,7 @@ class CouchDBViewHandler(object):
     def rereduce_handler(self, func_strings, values):
         results = []
         for func_string in func_strings:
-            if func_string not in self.rereduce_functions:
-                self.load_reduce(func_string)
+            self.load(func_string)
             r = self.rereduce_functions[func_string]
             if r._is_reduce_function:
                 results.append(r(values=values, rereduce=True))
@@ -193,13 +215,7 @@ class CouchDBViewHandler(object):
         self.output([True, results])
     
     def show_handler(self, func_string, doc, request):
-        if func_string not in self.show_functions:
-            env = copy.copy(self.eval_locals)
-            exec func_string in env
-            self.environments['show'][func_string] = env
-            for obj in env.values():
-                if getattr(obj, '_is_show_function', None) is True:
-                    self.show_functions[func_string] = obj
+        self.load(func_string)
         func = self.show_functions[func_string]
         if getattr(func, '_is_wsgi_show_function', None):
             request['couchdb.document'] = doc
@@ -223,13 +239,7 @@ class CouchDBViewHandler(object):
             self.output(['resp',response])
     
     def validate_handler(self, func_string, new, old, user):
-        if func_string not in self.validate_functions:
-            env = copy.copy(self.eval_locals)
-            exec func_string in env
-            self.environments['validate'][func_string] = env
-            for obj in env.values():
-                if getattr(obj, '_is_validate_function', None) is True:
-                    self.validate_functions[func_string] = obj    
+        self.load(func_string)
         func = self.validate_functions[func_string]
         try:
             func(new, old, user)
@@ -256,7 +266,11 @@ class CouchDBViewHandler(object):
     
     def list_row_handler(self, row):
         view = self.list_view_instance
-        
+        if view is None:
+            self.output({'error':'query_server_error','reason':'called list_row before list'})
+            # sys.exit(1) call is for spec compliance, I'm not convinced it's necessary
+            sys.exit(1)
+            return
         try:
             result = view.list_row(row)
             passed = True
@@ -287,6 +301,31 @@ class CouchDBViewHandler(object):
         self.list_view_instance = None
         self.output(['end', result])
     
+    def filter_handler(self, rows, request):
+        results = []
+        func_string = self.current_functions[0]
+        func = self.filter_functions[func_string]
+        for row in rows:
+            r = func(row, request)
+            if r is True:
+                results.append("true")
+            else:
+                results.append("false")
+        self.outs.write('[true,['+','.join(results)+']]\n')
+        self.outs.flush()
+        
+    def update_handler(self, func_string, doc, request):
+        self.load(func_string)
+        func = self.update_functions[func_string]
+        result = func(doc, request)
+        if result is None:
+            response = {}
+        else:
+            doc, response = result
+            if type(response) is str or type(response) is unicode:
+                response = {'body':response}
+        self.output(['up', doc, response])
+    
     def handle(self, array):
         try:
             self.handler_map[array[0]](*array[1:])
@@ -296,8 +335,8 @@ class CouchDBViewHandler(object):
     def lines(self):
         line = self.ins.readline()
         while line:
-            log.write(line)
-            log.flush()
+            # log.write(line)
+            # log.flush()
             yield json.loads(line)
             line = self.ins.readline()
             
