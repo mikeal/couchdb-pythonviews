@@ -43,9 +43,39 @@ def wsgi_show_function(func):
     func._is_show_function = True
     func._is_wsgi_show_function = True
 
+class EndList(Exception): pass
+
+class ListView(object):
+    _is_list_view = True
+    def __init__(self, head, request, _handler):
+        self.request = request
+        self.head = head
+        self.rows = [head]
+        self.index = 0
+        if 'offset' in head:
+            self.offset = head['offset']
+        self._handler = _handler
+    
+    # def start(self, head, request):
+    #     return [], {'headers':{'content-type':'text/plain'}}
+    # def list_row(self, row):
+    #     return row
+    # def list_end(self):
+    #     pass
+
+    # Not actually implemented yet
+    # def list_iter(self, ):
+    #     self.start({'content-type':'application/json'})
+    #     for row in self.rows:
+    #         yield row
+    # 
+
+
+        
 eval_locals = {'map_function':map_function, 'reduce_function':reduce_function, 
                'rereduce_function':rereduce_function, 'validate_function':validate_function,
-               'show_function':show_function, "wsgi_show_function":wsgi_show_function}
+               'show_function':show_function, "wsgi_show_function":wsgi_show_function,
+               'ListView':ListView, 'EndList':EndList}
 
 log = open('/Users/mikeal/Documents/git/couchdb-pythonviews/test.json', 'a')
 log.write('new run\n')
@@ -73,6 +103,7 @@ class CouchDBViewHandler(object):
         self.rereduce_functions = {}
         self.show_functions = {}
         self.validate_functions = {}
+        self.list_views = {}
         self.current_functions = []
         self.ins = ins
         self.outs = outs
@@ -81,7 +112,9 @@ class CouchDBViewHandler(object):
         
         self.handler_map = {'add_fun':self.add_fun,  'map_doc':self.map_doc, 'reset':self.reset,
                             'reduce' :self.reduce_handler, 'rereduce':self.rereduce_handler,
-                            'validate':self.validate_handler, 'show':self.show_handler}
+                            'validate':self.validate_handler, 'show':self.show_handler,
+                            'list':self.list_handler, 'list_row':self.list_row_handler, 
+                            'list_end':self.list_end_handler}
         
     def reset(self, *args):
         # if len(args) is not 0:
@@ -98,6 +131,8 @@ class CouchDBViewHandler(object):
             for obj in env.values():
                 if getattr(obj, '_is_map_function', None) is True:
                     self.map_functions[func_string] = obj
+                if getattr(obj, '_is_list_view', None) is True and obj is not ListView:
+                    self.list_views[func_string] = obj
         self.current_functions.append(func_string)
         self.outs.write('true\n')
         self.outs.flush()
@@ -168,7 +203,7 @@ class CouchDBViewHandler(object):
         func = self.show_functions[func_string]
         if getattr(func, '_is_wsgi_show_function', None):
             request['couchdb.document'] = doc
-            r = couchdbwsgi.CouchDBWSGIRequest(request)
+            r = couchdb_wsgi.CouchDBWSGIRequest(request)
             try:
                 response = self.application(r.environ, r.start_response)
             except Exception, e:
@@ -209,6 +244,48 @@ class CouchDBViewHandler(object):
         if valid:
             self.outs.write('1\n')
         self.outs.flush()
+    
+    def list_handler(self, head, request):
+        func_string = self.current_functions[0]
+        v = self.list_views[func_string](head, request, self)
+        self.list_view_instance = v
+        response = v.start(v.head, v.request)
+        if 'headers' not in response[1]:
+            response[1]['headers'] = {}
+        self.output(['start']+list(response))
+    
+    def list_row_handler(self, row):
+        view = self.list_view_instance
+        
+        try:
+            result = view.list_row(row)
+            passed = True
+        except EndList, e:
+            passed = False
+            self.output(['end', e.args])
+            self.list_view_instance = None
+        # TODO: Add more exception handling
+        if passed:
+            view.index += 1
+            if hasattr(view, 'offset'):
+                view.offset += 1
+            if result is None:
+                result = []
+            elif type(result) is not list and type(result) is not tuple:
+                result = [result]
+            
+            self.output(['chunks',result])
+        
+    def list_end_handler(self):
+        if hasattr(self.list_view_instance, 'list_end'):
+            result = self.list_view_instance.list_end()
+            if result is None:
+                result = []
+            elif type(result) is not list and type(result) is not tuple:
+                result = [result]
+        else: result = []
+        self.list_view_instance = None
+        self.output(['end', result])
     
     def handle(self, array):
         try:
