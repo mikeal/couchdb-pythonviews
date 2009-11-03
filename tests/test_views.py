@@ -77,7 +77,7 @@ def test_large_docs():
     f = open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'large_size_doc.json'))
     doc = json.load(f)
     for count in [10, 100, 1000, 10000]:
-        test_doc(doc, 'medium', count)
+        test_doc(doc, 'large', count)
     
 def print_perf():
     for key in sorted(timer.timers.keys()):
@@ -87,9 +87,13 @@ def print_perf():
             print key, ": Python by :",  js - py
         else:
             print key, ": Javascript by : ", py - js
+    f = open('performance_output.json', 'w')
+    f.write(json.dumps(timer.timers))
+    f.flush()
+    f.close()
 
 if __name__ == '__main__':
-    # test_small_docs()
+    test_small_docs()
     test_medium_docs()
-    # test_large_docs()
+    test_large_docs()
     print_perf()
