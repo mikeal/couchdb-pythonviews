@@ -4,11 +4,15 @@ import traceback
 import inspect
 import couchdb_wsgi
 
-# Use simplejson if it's installed because it's probably compiled with speedups
+# Use jsonlib2 because it's the fastest
 try:
-    import simplejson as json
+    import jsonlib2 as json
 except:
-    import json
+    # Use simplejson if it's installed because it's probably compiled with speedups
+    try:
+        import simplejson as json
+    except:
+        import json
 
 class Emitter(object):
     def __init__(self):
@@ -208,7 +212,7 @@ class CouchDBViewHandler(object):
         for func_string in func_strings:
             self.load(func_string)
             r = self.rereduce_functions[func_string]
-            if r._is_reduce_function:
+            if getattr(r, '_is_reduce_function', None):
                 results.append(r(values=values, rereduce=True))
             else:
                 results.append(r(values))
