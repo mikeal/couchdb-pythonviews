@@ -1,3 +1,4 @@
+import os
 import sys
 import copy
 import traceback
@@ -108,6 +109,44 @@ def get_reduce_args(func):
         return reduce_args_processor.keys()
     else:
         return spec.args
+        
+def _load(string, eval_locals=eval_locals):
+    env = copy.copy(eval_locals)
+    exec string in env
+    return env
+
+def generate_design_document(filename, name=None):
+    design = {}
+    if name is None:
+        name = os.path.split(filename)[-1].split('.')[0]
+    design['_id'] = '_design/'+name
+    
+    if os.path.isfile(filename):
+        files = [filename]
+    elif os.path.isdir(filename):
+        files = [os.path.join(filename, f) for f in os.listdir(filename) if f.endswith('.py')]
+    
+    for f in files:
+        string = open(f,'r').read()
+        name = os.path.split(f)[-1].split('.')[0]
+        env = _load(string)
+        for obj in env.values():
+            if getattr(obj, '_is_map_function', None) is True:
+                design.setdefault('views',{}).setdefault(name, {})['map'] = string
+            if getattr(obj, '_is_list_view', None) is True and obj is not ListView:
+                design.setdefault('lists',{})[name] = string
+            if getattr(obj, '_is_filter_function', None) is True:
+                design.setdefault('filters',{})[name] = string
+            if getattr(obj, '_is_update_function', None) is True:
+                design.setdefault('updates',{})[name] = string
+            if getattr(obj, '_is_reduce_function', None) is True:
+                design.setdefault('views',{}).setdefault(name, {})['reduce'] = string
+            if getattr(obj, '_is_validate_function', None) is True:
+                design['validate_doc_update'] = string
+            if getattr(obj, '_is_show_function', None) is True:
+                design.setdefault('shows',{})[name] = string
+    return design
+        
 
 class CouchDBViewHandler(object):
     def __init__(self, ins=sys.stdin, outs=sys.stdout, eval_locals=eval_locals):
@@ -147,8 +186,7 @@ class CouchDBViewHandler(object):
     
     def load(self, func_string):
         if func_string not in self.environments:
-            env = copy.copy(self.eval_locals)
-            exec func_string in env
+            env = _load(func_string, self.eval_locals)
             self.environments[func_string] = env
             for obj in env.values():
                 if getattr(obj, '_is_map_function', None) is True:
