@@ -120,6 +120,7 @@ def generate_design_document(filename, name=None):
     if name is None:
         name = os.path.split(filename)[-1].split('.')[0]
     design['_id'] = '_design/'+name
+    design['language'] = 'python'
     
     if os.path.isfile(filename):
         files = [filename]
