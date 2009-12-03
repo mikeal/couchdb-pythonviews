@@ -72,9 +72,9 @@ class ListView(object):
     
     # def start(self, head, request):
     #     return [], {'headers':{'content-type':'text/plain'}}
-    # def list_row(self, row):
+    # def handle_row(self, row):
     #     return row
-    # def list_end(self):
+    # def end(self):
     #     pass
 
     # Not actually implemented yet
@@ -82,9 +82,6 @@ class ListView(object):
     #     self.start({'content-type':'application/json'})
     #     for row in self.rows:
     #         yield row
-    # 
-
-
         
 eval_locals = {'map_function':map_function, 'reduce_function':reduce_function, 
                'rereduce_function':rereduce_function, 'validate_function':validate_function,
@@ -315,7 +312,7 @@ class CouchDBViewHandler(object):
             sys.exit(1)
             return
         try:
-            result = view.list_row(row)
+            result = view.handle_row(row)
             passed = True
         except EndList, e:
             passed = False
@@ -334,8 +331,8 @@ class CouchDBViewHandler(object):
             self.output(['chunks',result])
         
     def list_end_handler(self):
-        if hasattr(self.list_view_instance, 'list_end'):
-            result = self.list_view_instance.list_end()
+        if hasattr(self.list_view_instance, 'end'):
+            result = self.list_view_instance.end()
             if result is None:
                 result = []
             elif type(result) is not list and type(result) is not tuple:
@@ -373,7 +370,7 @@ class CouchDBViewHandler(object):
         try:
             self.handler_map[array[0]](*array[1:])
         except Exception, e:
-            self.output({"error": "exception:"+str(e.__class__.__name__), "reason": [e.args, traceback.format_exc()]})
+            self.output({"error": "exception:"+str(e.__class__.__name__), "reason": [e.args, traceback.format_exc()],"request":array})
     
     def lines(self):
         line = self.ins.readline()

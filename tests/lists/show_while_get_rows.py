@@ -1,7 +1,7 @@
 class MyListView(ListView):
     def start(self, head, request):
         return ['first chunk', request['q']], {}
-    def list_row(self, row):
+    def handle_row(self, row):
         return row['key']
-    def list_end(self):
+    def end(self):
         return 'tail'

@@ -1,7 +1,7 @@
 class MyListView(ListView):
     def start(self, head, request):
         return ['first chunk', request['q']], {}
-    def list_row(self, row):
+    def handle_row(self, row):
         if self.index > 1:
             raise EndList(row['key'], 'early tail')
         else:

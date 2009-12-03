@@ -1,9 +1,9 @@
 class MyListView(ListView):
     def start(self, head, request):
         return ['bacon'], {}
-    def list_row(self, row):
+    def handle_row(self, row):
         return [row['key'], 'eggs']
-    def list_end(self):
+    def end(self):
         return 'tail'
 
 # function(head, req) {
