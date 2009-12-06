@@ -341,7 +341,8 @@ class CouchDBViewHandler(object):
         self.list_view_instance = None
         self.output(['end', result])
     
-    def filter_handler(self, rows, request):
+    def filter_handler(self, rows, request, dbinfo=None):
+        request['db'] = dbinfo
         results = []
         func_string = self.current_functions[0]
         func = self.filter_functions[func_string]
