@@ -1,0 +1,4 @@
+# Sphinx inventory version 1
+# Project: couchdb-pythonviews
+# Version: 0.2
+couchdbviews mod index.html
