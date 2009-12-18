@@ -53,8 +53,45 @@ $ python ez_setup.py</pre>
 </div>
 <p>The view server line protocol is 100% JSON so installing an optimized JSON parser significantly improves performance. couchdb-pythonviews checks for JSON libraries in this order; jsonlib2, simplejson, json. If you have one of the optimized libraries installed (jsonlib2 or simplejson with C speedups) it will use it.</p>
 </div>
-<div class="section" id="using-python-views">
-<h2>Using Python Views<a class="headerlink" href="#using-python-views" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="map-and-reduce">
+<h2>Map and Reduce<a class="headerlink" href="#map-and-reduce" title="Permalink to this headline">¶</a></h2>
+<p>This section assumes you have some knowledge of how <a class="reference external" href="http://wiki.apache.org/couchdb/Introduction_to_CouchDB_views">CouchDB&#8217;s map and reduce system works</a>.</p>
+<p>This Python view server works a bit differently than the default JavaScript view server in CouchDB. Instead of defining a single function in the design document attribute for a given function the Python view server requires that you use a decorator to call out which function in the Python code is a given function type.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@map_function</span>
+<span class="k">def</span> <span class="nf">my_map_function</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+    <span class="n">emit</span><span class="p">(</span><span class="n">doc</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">],</span> <span class="mf">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This means that, if you like, you can stick multiple view functions in a single Python file which will sync the code blob to multiple attributes.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@map_function</span>
+<span class="k">def</span> <span class="nf">my_map_function</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+    <span class="n">emit</span><span class="p">(</span><span class="n">doc</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">],</span> <span class="mf">1</span><span class="p">)</span>
+
+<span class="nd">@reduce_function</span>
+<span class="k">def</span> <span class="nf">my_reduce_function</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">rereduce</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code can now be used as both the map and reduce attributes and inside the view server it will only get compiled once.</p>
+<p>Reduce is a special function, it uses the positional argument names to decide what should be passed to it. This means that the <strong>argument names you use in your reduce function matter</strong>. Valid argument names are keys, values, ids, length, and rereduce.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@reduce_function</span>
+<span class="k">def</span> <span class="nf">mega_reduce</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">rereduce</span><span class="p">):</span>
+    <span class="c"># I did *not* need all of these args</span>
+    <span class="k">if</span> <span class="n">rereduce</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">length</span>
+</pre></div>
+</div>
+<p>The Python view server also allows you to write explicit rereduce functions.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nd">@reduce_function</span>
+<span class="k">def</span> <span class="nf">full_length_reduce</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">length</span>
+
+<span class="nd">@rereduce_function</span>
+<span class="k">def</span> <span class="nf">full_length_rereduce</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -68,7 +105,7 @@ $ python ez_setup.py</pre>
             <ul>
 <li><a class="reference external" href="">couchdb-pythonviews &#8211; A Python View Server for CouchDB</a><ul>
 <li><a class="reference external" href="#installation">Installation</a></li>
-<li><a class="reference external" href="#using-python-views">Using Python Views</a></li>
+<li><a class="reference external" href="#map-and-reduce">Map and Reduce</a></li>
 </ul>
 </li>
 </ul>
