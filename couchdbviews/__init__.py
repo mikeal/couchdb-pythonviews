@@ -87,7 +87,7 @@ eval_locals = {'map_function':map_function, 'reduce_function':reduce_function,
                'rereduce_function':rereduce_function, 'validate_function':validate_function,
                'show_function':show_function, "wsgi_show_function":wsgi_show_function,
                'filter_function':filter_function, 'update_function':update_function,
-               'ListView':ListView, 'EndList':EndList}
+               'ListView':ListView, 'EndList':EndList, 'json':json}
 
 # log = open('/Users/mikeal/Documents/git/couchdb-pythonviews/test.json', 'a')
 # log.write('new run\n')
