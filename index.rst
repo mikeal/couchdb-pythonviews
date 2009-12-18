@@ -2,7 +2,7 @@
    sphinx-quickstart on Fri Dec 18 13:26:07 2009.
 
 couchdb-pythonviews -- A Python View Server for CouchDB
-==========================================
+=======================================================
 
 .. module:: couchdbviews
    :synopsis: CouchDB View Server Module.
@@ -25,4 +25,3 @@ Installation
    $ python ez_setup.py
 
 The view server line protocol is 100% JSON so installing an optimized JSON parser significantly improves performance. couchdb-pythonviews checks for JSON libraries in this order; jsonlib2, simplejson, json. If you have one of the optimized libraries installed (jsonlib2 or simplejson with C speedups) it will use it.
-
