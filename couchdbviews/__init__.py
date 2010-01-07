@@ -3,7 +3,6 @@ import sys
 import copy
 import traceback
 import inspect
-import couchdb_wsgi
 
 # Use jsonlib2 because it's the fastest
 try:
@@ -109,7 +108,7 @@ def get_reduce_args(func):
         
 def _load(string, eval_locals=eval_locals):
     env = copy.copy(eval_locals)
-    exec string in env
+    exec(string, env)
     return env
 
 def generate_design_document(filename, name=None):
@@ -124,10 +123,20 @@ def generate_design_document(filename, name=None):
     elif os.path.isdir(filename):
         files = [os.path.join(filename, f) for f in os.listdir(filename) if f.endswith('.py')]
     
+    env_locals = {}
+    
+    if os.path.isdir(os.path.join(filename, 'templates')):
+        design['templates'] = {}
+        for f in os.listdir(os.path.join(filename, 'templates')):
+            design['templates'][f.split('.')[0]] = open(os.path.join(filename, 'templates', f),'r').read()
+            env_locals['templates'] = design['templates']
+    
     for f in files:
         string = open(f,'r').read()
         name = os.path.split(f)[-1].split('.')[0]
-        env = _load(string)
+        eval_env = copy.copy(eval_locals)
+        eval_env.update(env_locals)
+        env = _load(string, eval_env)
         for obj in env.values():
             if getattr(obj, '_is_map_function', None) is True:
                 design.setdefault('views',{}).setdefault(name, {})['map'] = string
@@ -183,9 +192,11 @@ class CouchDBViewHandler(object):
         self.outs.write('true\n')
         self.outs.flush()
     
-    def load(self, func_string):
+    def load(self, func_string, env_locals={}):
         if func_string not in self.environments:
-            env = _load(func_string, self.eval_locals)
+            eval_env = copy.copy(self.eval_locals)
+            eval_env.update(env_locals)
+            env = _load(func_string, eval_env)
             self.environments[func_string] = env
             for obj in env.values():
                 if getattr(obj, '_is_map_function', None) is True:
@@ -223,7 +234,10 @@ class CouchDBViewHandler(object):
         for r in ref: e = e[r]
         func_string = e
         
-        self.load(func_string)
+        if 'templates' in self.environments[ddoc_name]:
+            self.load(func_string, {'templates':self.environments[ddoc_name]['templates']})
+        else:
+            self.load(func_string)
         if ref[0][-1] == 's':
             h = self.handler_map[ref[0][:-1]]
         else:
@@ -232,7 +246,7 @@ class CouchDBViewHandler(object):
         if spec.args[1] == 'func_string':
             return h(func_string, *args)
         else:
-            return h(*args, func_string=func_string)
+            return h(*args, **{"func_string":func_string})
     
     def ddoc_handler(self, *args):
         args = list(args)
@@ -287,10 +301,11 @@ class CouchDBViewHandler(object):
         func = self.show_functions[func_string]
         if getattr(func, '_is_wsgi_show_function', None):
             request['couchdb.document'] = doc
+            import couchdb_wsgi
             r = couchdb_wsgi.CouchDBWSGIRequest(request)
             try:
                 response = self.application(r.environ, r.start_response)
-            except Exception, e:
+            except Exception as e:
                 r.code = 500
                 response = traceback.format_exc()
                 r.headers = {'content-type':'text/plain'}
@@ -299,7 +314,7 @@ class CouchDBViewHandler(object):
         else:    
             try:
                 response = func(doc, request)
-            except Exception, e:
+            except Exception as e:
                 response = {'code':500, 'body':''.join(traceback.format_exc()), 
                             'headers':{'content-type':'text/plain'}}
             if type(response) is str or type(response) is unicode:
@@ -312,7 +327,7 @@ class CouchDBViewHandler(object):
         try:
             func(new, old, user)
             valid = True
-        except Exception, e:
+        except Exception as e:
             valid = False
             response = {"error": "exception:"+str(e.__class__.__name__), "reason": [e.args, traceback.format_exc()]}
             if len(e.args) is 1:
@@ -343,7 +358,7 @@ class CouchDBViewHandler(object):
         try:
             result = view.handle_row(row)
             passed = True
-        except EndList, e:
+        except EndList as e:
             passed = False
             self.output(['end', e.args])
             self.list_view_instance = None
@@ -400,7 +415,7 @@ class CouchDBViewHandler(object):
     def handle(self, array):
         try:
             self.handler_map[array[0]](*array[1:])
-        except Exception, e:
+        except Exception as e:
             self.output({"error": "exception:"+str(e.__class__.__name__), "reason": [e.args, traceback.format_exc()],"request":array})
     
     def lines(self):
