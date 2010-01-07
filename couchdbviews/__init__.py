@@ -169,7 +169,8 @@ class CouchDBViewHandler(object):
                             'validate':self.validate_handler, 'show':self.show_handler,
                             'list':self.list_handler, 'list_row':self.list_row_handler, 
                             'list_end':self.list_end_handler, 'filter':self.filter_handler,
-                            'update':self.update_handler}
+                            'update':self.update_handler, 'ddoc':self.ddoc_handler,
+                            'validate_doc_update':self.validate_handler}
         
     def reset(self, *args):
         # if len(args) is not 0:
@@ -212,6 +213,33 @@ class CouchDBViewHandler(object):
         self.current_functions.append(func_string)
         self.outs.write('true\n')
         self.outs.flush()
+    
+    def ddoc_new(self, name, doc):
+        self.environments[name] = doc
+        self.output(True)
+        
+    def ddoc_exec(self, ddoc_name, ref, args):
+        e = self.environments[ddoc_name]
+        for r in ref: e = e[r]
+        func_string = e
+        
+        self.load(func_string)
+        if ref[0][-1] == 's':
+            h = self.handler_map[ref[0][:-1]]
+        else:
+            h = self.handler_map[ref[0]]
+        spec = inspect.getargspec(h)
+        if spec.args[1] == 'func_string':
+            return h(func_string, *args)
+        else:
+            return h(*args, func_string=func_string)
+    
+    def ddoc_handler(self, *args):
+        args = list(args)
+        n = args.pop(0)
+        if n == 'new':
+            return self.ddoc_new(*args)
+        return self.ddoc_exec(n, args.pop(0), args[0])
         
     def log(self, string):
         self.output({"log":string})
@@ -295,8 +323,9 @@ class CouchDBViewHandler(object):
             self.outs.write('1\n')
         self.outs.flush()
     
-    def list_handler(self, head, request):
-        func_string = self.current_functions[0]
+    def list_handler(self, head, request, func_string=None):
+        if func_string is None:
+            func_string = self.current_functions[0]
         v = self.list_views[func_string](head, request, self)
         self.list_view_instance = v
         response = v.start(v.head, v.request)
@@ -341,10 +370,11 @@ class CouchDBViewHandler(object):
         self.list_view_instance = None
         self.output(['end', result])
     
-    def filter_handler(self, rows, request, dbinfo=None):
+    def filter_handler(self, rows, request, dbinfo=None, func_string=None):
         request['db'] = dbinfo
         results = []
-        func_string = self.current_functions[0]
+        if func_string is None:
+            func_string = self.current_functions[0]
         func = self.filter_functions[func_string]
         for row in rows:
             r = func(row, request)
