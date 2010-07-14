@@ -152,6 +152,8 @@ def generate_design_document(filename, name=None):
                 design['validate_doc_update'] = string
             if getattr(obj, '_is_show_function', None) is True:
                 design.setdefault('shows',{})[name] = string
+        if (env.has_key('reduce') and (type(env['reduce']) is str or type(env['reduce']) is unicode)):
+            design['views'][name]['reduce'] = env['reduce']
     return design
         
 
